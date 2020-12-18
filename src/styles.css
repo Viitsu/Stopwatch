@@ -1,0 +1,40 @@
+div {
+  font-family: 'Consolas';
+  width: 45%;
+  height: 300px;
+  text-align: center;
+  border-radius: 5%;
+  border-color: black;
+}
+
+button {
+  font-family: 'Consolas';
+  padding: 4px 8px;
+  border-radius: 10%;
+  border-color: gray;
+  cursor: pointer;
+  margin: 5px;
+  font-weight: bold;
+  transition-duration: 0.1s;
+}
+
+button:hover {
+  background-color: lightgrey;
+}
+
+h1 {
+  background-color: lightcyan;
+}
+
+input {
+  font-family: 'Consolas';
+  margin-top: 30px;
+  border: solid;
+  border-width: 2px;
+}
+
+p {
+  font-family: 'Consolas';
+  font-weight: bold;
+}
+

@@ -1,16 +1,24 @@
-import React from 'react';
+import React, { useState } from "react";
+import SavedTimes from './SavedTimes';
+import Timer from './Timer';
 
 function App() {
+
+  const [rounds, setRounds] = useState([]); //kierrosten talletuspaikka
+
+  const addRound = (round) => {   //funktio kierrosten lisäämiseen
+    setRounds([...rounds, round]);
+  }
+
+  const clearList = () => {   //... ja tyhjentämiseen
+    setRounds([]);
+  }
+
   return (
-    <div style={{ textAlign: 'center' }}>
-      <header>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
+    <div style={{width:'700px'}}>
+      <h1>Stopwatch</h1>
+      <Timer addRound={addRound}/>
+      <SavedTimes rounds={rounds} clearList={clearList}/>
     </div>
   );
 }
